@@ -21,6 +21,6 @@ public class StringPermutations {
     public static void main(String[] args) {
 
         StringPermutations stringPermutations=new StringPermutations();
-        stringPermutations.permutations("ali");
+        stringPermutations.permutations("abc");
     }
 }

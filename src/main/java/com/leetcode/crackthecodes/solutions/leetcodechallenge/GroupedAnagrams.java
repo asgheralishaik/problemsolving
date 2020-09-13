@@ -12,7 +12,7 @@ public class GroupedAnagrams {
             Arrays.sort(chars);
             String sorted = new String(chars);
             if (!map.containsKey(sorted)) {
-                map.put(sorted, new ArrayList<>());
+                map.put (sorted, new ArrayList<>());
             }
                 map.get(sorted).add(str);
 

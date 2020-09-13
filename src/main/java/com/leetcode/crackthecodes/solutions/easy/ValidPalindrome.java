@@ -3,20 +3,31 @@ package com.leetcode.crackthecodes.solutions.easy;
 public class ValidPalindrome {
 
     public boolean isPalindrome(String s) {
-        int i = 0;
-        int j = s.length() - 1;
-        while (i < j) {
-            while (i<j && !Character.isLetterOrDigit(s.charAt(i))) {
-                i++;
-            }
-            while (i<j && !Character.isLetterOrDigit(s.charAt(j))) {
-                j--;
+
+        s = s.toLowerCase();
+        int left = 0;
+        int right = s.length() - 1;
+
+        while (left < right) {
+
+            if (!Character.isLetterOrDigit(s.charAt(left))) {
+                left++;
+            } else if (!Character.isLetterOrDigit(s.charAt(right))) {
+                right--;
+            } else if (!(s.charAt(left) == s.charAt(right))) {
+                return false;
+            } else {
+                left++;
+                right--;
             }
 
-            if (i<j && Character.toLowerCase(s.charAt(i++)) != Character.toLowerCase(s.charAt(j--))) {
-                return false;
-            }
         }
         return true;
+    }
+
+
+    public static void main(String[] args) {
+        ValidPalindrome v = new ValidPalindrome();
+        v.isPalindrome("A man, a plan, a canal: Panama");
     }
 }

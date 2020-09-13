@@ -19,6 +19,6 @@ public class BuyOrSellStocks2 {
     public static void main(String[] args) {
 
         BuyOrSellStocks2 buyOrSellStocks = new BuyOrSellStocks2();
-        System.out.println(buyOrSellStocks.maxProfit(new int[]{1,2,3,4,5}));
+        System.out.println(buyOrSellStocks.maxProfit(new int[]{5,1,7,8,13,20}));
     }
 }
